@@ -1,3 +1,19 @@
 micronaut:
   application:
     name: security-ldap-graal
+---
+micronaut:
+  security:
+    enabled: false
+    ldap:
+      enabled: true
+      default:
+        context:
+          server: "ldap://localhost:389"
+          managerDn: "cn=admin,dc=example,dc=com"
+          managerPassword: "password"
+        search:
+          base: "dc=example,dc=com"
+        groups:
+          enabled: true
+          base: "dc=example,dc=com"
