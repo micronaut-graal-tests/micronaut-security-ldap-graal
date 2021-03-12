@@ -4,6 +4,7 @@ micronaut:
 ---
 micronaut:
   security:
+    authentication: bearer
     ldap:
       default:
         context:
