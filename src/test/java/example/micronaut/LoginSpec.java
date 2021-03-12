@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class LoginSpec {
-    
+
     @Test
     public void ldapLogin() {
         EmbeddedServer embeddedServer = ApplicationContext.run(EmbeddedServer.class);
@@ -24,6 +24,7 @@ public class LoginSpec {
         credentials.setPassword("password");
         HttpResponse<AccessRefreshToken> response = client.exchange(HttpRequest.POST("/login", credentials), AccessRefreshToken.class);
         Assertions.assertEquals(HttpStatus.OK, response.status());
+        Assertions.assertNotNull(response.body().getAccessToken());
         embeddedServer.close();
     }
 }
