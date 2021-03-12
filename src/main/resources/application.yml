@@ -5,7 +5,6 @@ micronaut:
 micronaut:
   security:
     ldap:
-      enabled: true
       default:
         context:
           server: 'ldap://ldap.forumsys.com:389'
