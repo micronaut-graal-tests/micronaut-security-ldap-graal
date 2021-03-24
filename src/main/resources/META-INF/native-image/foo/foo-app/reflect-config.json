@@ -1,0 +1,6 @@
+[
+  {
+    "name":"com.sun.jndi.ldap.VersionHelper12",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  }
+]
