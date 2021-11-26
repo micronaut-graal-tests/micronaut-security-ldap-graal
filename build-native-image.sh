@@ -1,3 +1,4 @@
 #!/bin/bash
-./gradlew nativeImage
-cp build/native-image/security-ldap .
+
+./gradlew nativeCompile
+cp build/native/nativeCompile/security-ldap .
